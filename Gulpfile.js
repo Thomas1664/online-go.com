@@ -1,9 +1,9 @@
 'use strict';
 
 // Which backend server would you like to use today? ...
-let BACKEND = process.env.OGS_BACKEND || 'BETA';
+//let BACKEND = process.env.OGS_BACKEND || 'BETA';
 //BACKEND = 'PRODUCTION';
-//BACKEND = 'LOCAL';
+const BACKEND = 'LOCAL';
 
 const spawn        = require('child_process').spawn;
 const fs           = require('fs');

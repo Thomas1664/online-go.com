@@ -803,9 +803,12 @@ export class Play extends React.Component<{}, PlayState> {
                     </div>
                     <div className="automatch-row-container">
                         <div className="automatch-row">
-                            <button className="primary" onClick={() => this.findMatch("blitz")}>
+                            <button className="primary play-button" onClick={() => this.findMatch("blitz")}>
                                 <div className="play-button-text-root">
-                                    <i className="fa fa-bolt" /> {_("Blitz")}
+                                    <div className="play-button-text-title">
+                                        <i className="fa fa-bolt" />
+                                        {_("Blitz")}
+                                    </div>
                                     <span className="time-per-move">
                                         {pgettext(
                                             "Automatch average time per move",
@@ -814,9 +817,12 @@ export class Play extends React.Component<{}, PlayState> {
                                     </span>
                                 </div>
                             </button>
-                            <button className="primary" onClick={() => this.findMatch("live")}>
+                            <button className="primary play-button" onClick={() => this.findMatch("live")}>
                                 <div className="play-button-text-root">
-                                    <i className="fa fa-clock-o" /> {_("Normal")}
+                                    <div className="play-button-text-title">
+                                        <i className="fa fa-clock-o" />
+                                        {_("Normal")}
+                                    </div>
                                     <span className="time-per-move">
                                         {pgettext(
                                             "Automatch average time per move",
@@ -827,20 +833,24 @@ export class Play extends React.Component<{}, PlayState> {
                             </button>
                         </div>
                         <div className="automatch-row">
-                            <button className="primary" onClick={this.newComputerGame}>
+                            <button className="primary play-button" onClick={this.newComputerGame}>
                                 <div className="play-button-text-root">
-                                    <i className="fa fa-desktop" /> {_("Computer")}
+                                    <div className="play-button-text-title">
+                                        <i className="fa fa-desktop" />
+                                        {_("Computer")}
+                                    </div>
                                     <span className="time-per-move"></span>
                                 </div>
                             </button>
                             <button
-                                className="primary"
+                                className="primary play-button"
                                 onClick={() => this.findMatch("correspondence")}
                             >
                                 <div className="play-button-text-root">
-                                    <span>
-                                        <i className="ogs-turtle" /> {_("Correspondence")}
-                                    </span>
+                                    <div className="play-button-text-title">
+                                        <i className="ogs-turtle" />
+                                        <span>{_("Correspondence")}</span>
+                                    </div>
                                     <span className="time-per-move">
                                         {pgettext(
                                             "Automatch average time per move",
@@ -854,7 +864,7 @@ export class Play extends React.Component<{}, PlayState> {
                             <div>{_("Custom Game")}</div>
                         </div>
                         <div className="custom-game-row">
-                            <button className="primary" onClick={this.newCustomGame}>
+                            <button className="primary play-button" onClick={this.newCustomGame}>
                                 <i className="fa fa-cog" /> {_("Create")}
                             </button>
                         </div>
